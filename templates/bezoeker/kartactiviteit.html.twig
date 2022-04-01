@@ -9,20 +9,38 @@
     <section >
         <article>
             <h3>Activiteit bekijken</h3>
-            <ul class="list-group">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>id</th>
+                        <th>Naam</th>
+                        <th>Min. leeftijd</th>
+                        <th>Tijdsduur</th>
+                        <th>Prijs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>{{ activiteit.id }}</th>
+                            <th>{{ activiteit.naam }}</th>
+                            <th>{{ activiteit.minleeftijd }} jaar</th>
+                            <th>{{ activiteit.tijdsduur }} min.</th>
+                            <th>€ {{ activiteit.prijs }}</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+{#            <ul class="list-group">#}
 
 
-{#                {{ dump(activiteiten) }}#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.id }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.naam }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.minleeftijd }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.tijdsduur }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.prijs }}</li>#}
 
-
-{#                    {{ blabla.naam }}#}
-
-                    <li class="list-group-item text-primary">{{ activiteit.id }}</li>
-                    <li class="list-group-item text-primary">{{ activiteit.naam }}</li>
-                    <li class="list-group-item text-primary">{{ activiteit.minleeftijd }}</li>
-                    <li class="list-group-item text-primary">{{ activiteit.tijdsduur }}</li>
-                    <li class="list-group-item text-primary">{{ activiteit.prijs }}</li>
-            </ul>
+{#            </ul>#}
         </article>
         <figure>
 {#            <img class="img-responsive center-block" style="width:30%"src={{ asset('img/kart.jpg') }} alt="kart" />#}
